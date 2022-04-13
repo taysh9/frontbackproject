@@ -11,8 +11,7 @@ mongoose.connect('mongodb://localhost:27017/TaskManager', { useNewUrlParser: tru
 });
 
 // To prevent deprectation warnings (from MongoDB native driver)
-mongoose.set('useCreateIndex', true);
-mongoose.set('useFindAndModify', false);
+
 
 
 module.exports = {
