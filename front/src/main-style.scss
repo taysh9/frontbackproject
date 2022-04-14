@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700|Nunito:400,700');
 
 $turquoise: #44ddd0;
+$white: #ffffff;
 $green: #27d7a1;
 $light-green: #45f69e;
 $dark-green: rgb(0, 100, 80);
@@ -28,7 +29,7 @@ $input-shadow: none;
 // Set custom global styles (will be applied to whole app)
 
 html {
-  background: linear-gradient(to right top, $turquoise, $green);
+  background: linear-gradient(to right top, $white, $white);
 }
 
 html, body {
