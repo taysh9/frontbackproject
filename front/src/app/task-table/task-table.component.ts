@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { Validators } from '@angular/forms';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
@@ -18,6 +19,9 @@ export class TaskTableComponent implements AfterViewInit {
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ['task', 'importance', 'time_needed', 'delegate',
                       'complete', 'completion_time'];
+  values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  importanceVal: any;
+
 
   constructor() {
     this.dataSource = new TaskTableDataSource();
@@ -27,5 +31,7 @@ export class TaskTableComponent implements AfterViewInit {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
     this.table.dataSource = this.dataSource;
+    // this.importanceVal = importanceVal;
+    console.log(this.importanceVal);
   }
 }

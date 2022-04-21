@@ -1,0 +1,57 @@
+.header {
+  position: relative;
+  text-align: center;
+  top: 50px;
+  font-size: large;
+}
+
+.page {
+  min-width: 1520px;
+}
+
+.mat-grid-tile {
+  background: lightblue;
+}
+.mat-grid-list {
+  margin: auto;
+  width: 700px;
+  padding: 75px;
+}
+
+.urgent {
+  position: relative;
+  left: 525px;
+  top: 130px;
+}
+
+.not_urgent {
+  position: relative;
+  left: 940px;
+  top: 100px;
+}
+
+.important {
+  position: relative;
+  left: 105px;
+  top: 245px;
+
+}
+
+.importance_description {
+  position: relative;
+  left: 99px;
+  top: 290px;
+}
+
+
+.not_important {
+  position: relative;
+  left: 94px;
+  top: 425px;
+}
+
+.not_importance_description {
+  position: relative;
+  left: 102px;
+  top: 413px;
+}

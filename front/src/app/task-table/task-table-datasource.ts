@@ -7,54 +7,57 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 // TODO: Replace this with your own data model type
 export interface TaskTableItem {
   task: string;
-  importance: number;
+  importance: any;
   time_needed: number;
   delegate: string;
   complete: string;
   completion_time: number;
 }
 
+let importanceVal = ""
+console.log(importanceVal)
+
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: TaskTableItem[] = [
-  {task: "Calculus II Exam", importance: 8, time_needed: 3, delegate: "Yes",
+  {task: "Calculus II Exam", importance: "", time_needed: 3, delegate: "Yes",
    complete: "No", completion_time: 0},
-  {task: "Machine Learning HW 2", importance: 4, time_needed: 3, delegate: "Yes",
+  {task: "Machine Learning HW", importance: "", time_needed: 3, delegate: "Yes",
   complete: "No", completion_time: 0},
-  {task: "Design Appreciation: Quiz 4", importance: 2, time_needed: 3, delegate: "Yes",
+  {task: "Design Appreciation: Quiz 4", importance: "", time_needed: 3, delegate: "Yes",
   complete: "No", completion_time: 0},
-  {task: "English Essay", importance: 5, time_needed: 3, delegate: "Yes",
+  {task: "English Essay", importance: "", time_needed: 3, delegate: "Yes",
   complete: "No", completion_time: 0},
-  {task: "Chemistry Lab", importance: 2, time_needed: 3, delegate: "Yes",
+  {task: "Chemistry Lab", importance: "", time_needed: 3, delegate: "Yes",
   complete: "No", completion_time: 0},
-  {task: "Shirin", importance: 69, time_needed: 3, delegate: "Yes",
+  {task: "Report", importance: "", time_needed: 3, delegate: "Yes",
   complete: "No", completion_time: 0},
-  {task: "Something", importance: 1, time_needed: 3, delegate: "Yes",
+  {task: "Something", importance: "", time_needed: 3, delegate: "Yes",
   complete: "No", completion_time: 0},
-  {task: "Something else", importance: 1, time_needed: 3, delegate: "Yes",
+  {task: "Something else", importance: "", time_needed: 3, delegate: "Yes",
   complete: "No", completion_time: 0},
-  {task: "Buy pens", importance: 1, time_needed: 3, delegate: "Yes",
+  {task: "Buy pens", importance: "", time_needed: 3, delegate: "Yes",
   complete: "No", completion_time: 0},
-  {task: "Get groceries", importance: 1, time_needed: 3, delegate: "Yes",
+  {task: "Get groceries", importance: "", time_needed: 3, delegate: "Yes",
   complete: "No", completion_time: 0},
-  {task: "11", importance: 1, time_needed: 3, delegate: "Yes",
+  {task: "11", importance: "", time_needed: 3, delegate: "Yes",
   complete: "No", completion_time: 0},
-  {task: "12", importance: 1, time_needed: 3, delegate: "Yes",
+  {task: "12", importance: "", time_needed: 3, delegate: "Yes",
   complete: "No", completion_time: 0},
-  {task: "13", importance: 1, time_needed: 3, delegate: "Yes",
+  {task: "13", importance: "", time_needed: 3, delegate: "Yes",
   complete: "No", completion_time: 0},
-  {task: "14", importance: 1, time_needed: 3, delegate: "Yes",
+  {task: "14", importance: "", time_needed: 3, delegate: "Yes",
   complete: "No", completion_time: 0},
-  {task: "15", importance: 1, time_needed: 3, delegate: "Yes",
+  {task: "15", importance: "", time_needed: 3, delegate: "Yes",
   complete: "No", completion_time: 0},
-  {task: "16", importance: 1, time_needed: 3, delegate: "Yes",
+  {task: "Task 16", importance: "", time_needed: 3, delegate: "Yes",
   complete: "No", completion_time: 0},
-  {task: "17", importance: 1, time_needed: 3, delegate: "Yes",
+  {task: "Task 17", importance: "", time_needed: 3, delegate: "Yes",
   complete: "No", completion_time: 0},
-  {task: "18", importance: 1, time_needed: 3, delegate: "Yes",
+  {task: "Task 18", importance: "", time_needed: 3, delegate: "Yes",
   complete: "No", completion_time: 0},
-  {task: "19", importance: 1, time_needed: 3, delegate: "Yes",
+  {task: "Task 19", importance: "", time_needed: 3, delegate: "Yes",
   complete: "No", completion_time: 0},
-  {task: "20", importance: 1, time_needed: 3, delegate: "Yes",
+  {task: "Task 20", importance: "", time_needed: 3, delegate: "Yes",
   complete: "No", completion_time: 0},
 ];
 
