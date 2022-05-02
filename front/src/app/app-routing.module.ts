@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MatrixComponent } from './matrix/matrix/matrix.component';
 import {ViewsComponent} from "./pages/views/views.component";
+import { TaskTableComponent } from './task-table/task-table.component';
 
 const routes: Routes = [
-  {path: '', component: ViewsComponent}
-
+  {path: '', component: TaskTableComponent},
+  {path: 'matrix', component: MatrixComponent}
 ];
 
 @NgModule({
