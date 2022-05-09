@@ -19,10 +19,11 @@ export class TaskTableComponent implements AfterViewInit {
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ['task', 'importance', 'time_needed', 'delegate',
-                      'complete', 'completion_time'];
+  'date', 'complete', 'completion_time', 'save'];
   values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   sVals = new FormControl();
   importanceVal: any;
+  public myDates: any = {};
 
 
   constructor() {
@@ -37,7 +38,11 @@ export class TaskTableComponent implements AfterViewInit {
 
   }
 
-  printvals() {
-    console.log(this.sVals.value);
+  // printvals() {
+  //   console.log(this.sVals.value);
+  // }
+  logData(row: any, ithDate: Date){
+    row['date'] = ithDate;
+    console.log(row);
   }
 }
