@@ -3,6 +3,7 @@ import { Validators } from '@angular/forms';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
+import { FormControl } from '@angular/forms';
 import { TaskTableDataSource, TaskTableItem } from './task-table-datasource';
 
 @Component({
@@ -20,6 +21,7 @@ export class TaskTableComponent implements AfterViewInit {
   displayedColumns = ['task', 'importance', 'time_needed', 'delegate',
                       'complete', 'completion_time'];
   values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  sVals = new FormControl();
   importanceVal: any;
 
 
@@ -31,7 +33,11 @@ export class TaskTableComponent implements AfterViewInit {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
     this.table.dataSource = this.dataSource;
-    // this.importanceVal = importanceVal;
-    console.log(this.importanceVal);
+
+
+  }
+
+  printvals() {
+    console.log(this.sVals.value);
   }
 }

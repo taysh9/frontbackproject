@@ -11,12 +11,10 @@
       <!--  -->
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Importance (1-10)</th>
       <mat-cell *matCellDef="let row">{{row.importance}}
-      <mat-form-field [style.width.px] = 35>
-      <mat-select [(ngModel)] = "importanceVal">
-      <mat-option *ngFor="let val of values" [value]="val">
-        {{val}}
-      </mat-option>
-    </mat-select>
+        <mat-form-field>
+          <mat-select placeholder="Prio" [formControl]="sVals" >
+            <mat-option *ngFor="let val of values" [value]="val">{{ val }}</mat-option>
+          </mat-select>
         </mat-form-field>
       </mat-cell>
     </ng-container>
@@ -59,6 +57,6 @@
   </mat-paginator>
 
   <button mat-raised-button color="primary"> Add Task </button>
-  <button mat-raised-button color="primary"> Save </button>
+  <button mat-raised-button color="primary" (click)="printvals()"> Save </button>
   <button mat-raised-button color="primary" routerLink="/matrix"> Matrix </button>
 </div>
