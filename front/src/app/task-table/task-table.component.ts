@@ -18,8 +18,8 @@ export class TaskTableComponent implements AfterViewInit {
   dataSource: TaskTableDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['task', 'importance', 'time_needed', 'delegate',
-  'date', 'complete', 'completion_time', 'save'];
+  displayedColumns = ['task', 'importance', 'timeNeeded', 'delegate',
+  'date', 'complete', 'completionTime', 'save'];
   values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   sVals = new FormControl();
   importanceVal: any;
@@ -42,7 +42,10 @@ export class TaskTableComponent implements AfterViewInit {
   //   console.log(this.sVals.value);
   // }
   logData(row: any, ithDate: Date){
+    row['timeNeeded'] = Number(row["timeNeeded"])
     row['date'] = ithDate;
+    row['delegate'] = row['delegate'] === 'yes';
+    row['complete'] = row['complete'] == 'yes';
     console.log(row);
   }
 }

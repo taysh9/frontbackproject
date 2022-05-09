@@ -8,57 +8,40 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 export interface TaskTableItem {
   task: string;
   importance: any;
-  time_needed: number;
+  timeNeeded: number;
   delegate: string;
   complete: string;
-  completion_time: number;
+  completionTime: number;
 }
 
 let importanceVal = ""
-console.log(importanceVal)
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: TaskTableItem[] = [
-  {task: "Calculus II Exam", importance: "", time_needed: 3, delegate: "Yes",
-   complete: "No", completion_time: 0},
-  {task: "Machine Learning HW", importance: "", time_needed: 3, delegate: "Yes",
-  complete: "No", completion_time: 0},
-  {task: "Design Appreciation: Quiz 4", importance: "", time_needed: 3, delegate: "Yes",
-  complete: "No", completion_time: 0},
-  {task: "English Essay", importance: "", time_needed: 3, delegate: "Yes",
-  complete: "No", completion_time: 0},
-  {task: "Chemistry Lab", importance: "", time_needed: 3, delegate: "Yes",
-  complete: "No", completion_time: 0},
-  {task: "Report", importance: "", time_needed: 3, delegate: "Yes",
-  complete: "No", completion_time: 0},
-  {task: "Something", importance: "", time_needed: 3, delegate: "Yes",
-  complete: "No", completion_time: 0},
-  {task: "Something else", importance: "", time_needed: 3, delegate: "Yes",
-  complete: "No", completion_time: 0},
-  {task: "Buy pens", importance: "", time_needed: 3, delegate: "Yes",
-  complete: "No", completion_time: 0},
-  {task: "Get groceries", importance: "", time_needed: 3, delegate: "Yes",
-  complete: "No", completion_time: 0},
-  {task: "11", importance: "", time_needed: 3, delegate: "Yes",
-  complete: "No", completion_time: 0},
-  {task: "12", importance: "", time_needed: 3, delegate: "Yes",
-  complete: "No", completion_time: 0},
-  {task: "13", importance: "", time_needed: 3, delegate: "Yes",
-  complete: "No", completion_time: 0},
-  {task: "14", importance: "", time_needed: 3, delegate: "Yes",
-  complete: "No", completion_time: 0},
-  {task: "15", importance: "", time_needed: 3, delegate: "Yes",
-  complete: "No", completion_time: 0},
-  {task: "Task 16", importance: "", time_needed: 3, delegate: "Yes",
-  complete: "No", completion_time: 0},
-  {task: "Task 17", importance: "", time_needed: 3, delegate: "Yes",
-  complete: "No", completion_time: 0},
-  {task: "Task 18", importance: "", time_needed: 3, delegate: "Yes",
-  complete: "No", completion_time: 0},
-  {task: "Task 19", importance: "", time_needed: 3, delegate: "Yes",
-  complete: "No", completion_time: 0},
-  {task: "Task 20", importance: "", time_needed: 3, delegate: "Yes",
-  complete: "No", completion_time: 0},
+  {task: "", importance: "", timeNeeded: 0, delegate: "",
+   complete: "No", completionTime: 0},
+   {task: "", importance: "", timeNeeded: 0, delegate: "",
+   complete: "No", completionTime: 0},
+   {task: "", importance: "", timeNeeded: 0, delegate: "",
+   complete: "No", completionTime: 0},
+   {task: "", importance: "", timeNeeded: 0, delegate: "",
+   complete: "No", completionTime: 0},
+   {task: "", importance: "", timeNeeded: 0, delegate: "",
+   complete: "No", completionTime: 0},
+   {task: "", importance: "", timeNeeded: 0, delegate: "",
+   complete: "No", completionTime: 0},
+   {task: "", importance: "", timeNeeded: 0, delegate: "",
+   complete: "No", completionTime: 0},
+   {task: "", importance: "", timeNeeded: 0, delegate: "",
+   complete: "No", completionTime: 0},
+   {task: "", importance: "", timeNeeded: 0, delegate: "",
+   complete: "No", completionTime: 0},
+   {task: "", importance: "", timeNeeded: 0, delegate: "",
+   complete: "No", completionTime: 0},
+   {task: "", importance: "", timeNeeded: 0, delegate: "",
+   complete: "No", completionTime: 0},
+   {task: "", importance: "", timeNeeded: 0, delegate: "",
+   complete: "No", completionTime: 0},
 ];
 
 /**
