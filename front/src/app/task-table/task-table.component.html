@@ -15,7 +15,7 @@
     <ng-container matColumnDef="importance">
       <!--  -->
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Importance (1-10)</th>
-      <mat-cell *matCellDef="let row">{{row.importance}}
+      <mat-cell *matCellDef="let row">
         <mat-form-field>
           <mat-select placeholder="Importance" [(ngModel)]="row.importance" >
             <mat-option *ngFor="let val of values" [value]="val">{{ val }}</mat-option>
@@ -67,7 +67,6 @@
           <mat-datepicker-toggle [for]="picker" matSuffix></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
-        {{row.date}}
       </td>
     </ng-container>
 
