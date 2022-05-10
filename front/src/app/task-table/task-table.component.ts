@@ -5,6 +5,8 @@ import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
 import { FormControl } from '@angular/forms';
 import { TaskTableDataSource, TaskTableItem } from './task-table-datasource';
+import {WebservService} from "../webserv.service";
+import {timestamp} from "rxjs";
 
 @Component({
   selector: 'app-task-table',
@@ -26,11 +28,12 @@ export class TaskTableComponent implements AfterViewInit {
   public myDates: any = {};
 
 
-  constructor() {
+  constructor(private webServ: WebservService) {
     this.dataSource = new TaskTableDataSource();
   }
 
   ngAfterViewInit(): void {
+    console.log(new Date().getTime());
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
     this.table.dataSource = this.dataSource;
@@ -47,6 +50,28 @@ export class TaskTableComponent implements AfterViewInit {
     row['date'] = ithDate;
     row['delegate'] = row['delegate'] === 'yes';
     row['complete'] = row['complete'] === 'yes';
+    console.log(typeof row);
+    console.log(JSON.stringify(row) );
     console.log(row);
+    this.createTask(row).subscribe((response:any) => {
+      console.log(response);
+    });
+
+
+
+
+  }
+
+
+
+
+  createTask(row:Object)
+  {
+
+    console.log("postad");
+    return this.webServ.post('task',{row});
+
+
+
   }
 }

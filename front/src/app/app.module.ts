@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 // import { MatrixComponent } from './matrix/matrix.component';
@@ -19,6 +18,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker'
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import {HttpClientModule} from "@angular/common/http";
+
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { MatInputModule } from '@angular/material/input';
     MatGridListModule,
     MatSidenavModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     MatDatepickerModule,
     MatNativeDateModule,
