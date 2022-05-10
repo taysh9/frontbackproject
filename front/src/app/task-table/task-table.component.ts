@@ -42,7 +42,8 @@ export class TaskTableComponent implements AfterViewInit {
   //   console.log(this.sVals.value);
   // }
   logData(row: any, ithDate: Date){
-    row['timeNeeded'] = Number(row["timeNeeded"])
+    row['timeNeeded'] = Number(row["timeNeeded"]);
+    row['completionTime'] = Number(row['completionTime']);
     row['date'] = ithDate;
     row['delegate'] = row['delegate'] === 'yes';
     row['complete'] = row['complete'] === 'yes';

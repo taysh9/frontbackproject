@@ -86,7 +86,15 @@
     <!-- Completion Time Column -->
     <ng-container matColumnDef="completionTime">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Completion Time (Hours)</th>
-      <td mat-cell *matCellDef="let row">{{row.completionTime}}</td>
+      <td mat-cell *matCellDef="let row">
+        <ng-container *ngIf="row.complete === 'yes'">
+          <mat-form-field>
+            <input matInput [(ngModel)]="row.completionTime">
+          </mat-form-field>
+        </ng-container>
+        <ng-container *ngIf="row.complete === 'no'">
+        </ng-container>
+      </td>
     </ng-container>
 
     <!-- Save column -->
