@@ -47,6 +47,7 @@ export class TaskTableComponent implements AfterViewInit {
     row['date'] = ithDate;
     row['delegate'] = row['delegate'] === 'yes';
     row['complete'] = row['complete'] === 'yes';
-    console.log(row);
+    // console.log(row);
+    console.log(JSON.stringify(row));
   }
 }
