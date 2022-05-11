@@ -19,13 +19,17 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {HttpClientModule} from "@angular/common/http";
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskTableComponent,
-    MatrixComponent
+    MatrixComponent,
+    LoginComponent,
+    RegisterComponent
     // ViewsComponent,
   ],
   imports: [
