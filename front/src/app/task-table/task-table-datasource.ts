@@ -8,40 +8,40 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 export interface TaskTableItem {
   task: string;
   importance: any;
-  timeNeeded: number;
+  timeNeeded: any;
   delegate: string;
   complete: string;
-  completionTime: number;
+  completionTime: any;
 }
 
 let importanceVal = ""
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: TaskTableItem[] = [
-  {task: "", importance: "", timeNeeded: 0, delegate: "",
-   complete: "No", completionTime: 0},
-   {task: "", importance: "", timeNeeded: 0, delegate: "",
-   complete: "No", completionTime: 0},
-   {task: "", importance: "", timeNeeded: 0, delegate: "",
-   complete: "No", completionTime: 0},
-   {task: "", importance: "", timeNeeded: 0, delegate: "",
-   complete: "No", completionTime: 0},
-   {task: "", importance: "", timeNeeded: 0, delegate: "",
-   complete: "No", completionTime: 0},
-   {task: "", importance: "", timeNeeded: 0, delegate: "",
-   complete: "No", completionTime: 0},
-   {task: "", importance: "", timeNeeded: 0, delegate: "",
-   complete: "No", completionTime: 0},
-   {task: "", importance: "", timeNeeded: 0, delegate: "",
-   complete: "No", completionTime: 0},
-   {task: "", importance: "", timeNeeded: 0, delegate: "",
-   complete: "No", completionTime: 0},
-   {task: "", importance: "", timeNeeded: 0, delegate: "",
-   complete: "No", completionTime: 0},
-   {task: "", importance: "", timeNeeded: 0, delegate: "",
-   complete: "No", completionTime: 0},
-   {task: "", importance: "", timeNeeded: 0, delegate: "",
-   complete: "No", completionTime: 0},
+   {task: "", importance: "", timeNeeded: "", delegate: "",
+   complete: "No", completionTime: ""},
+   {task: "", importance: "", timeNeeded: "", delegate: "",
+   complete: "No", completionTime: ""},
+   {task: "", importance: "", timeNeeded: "", delegate: "",
+   complete: "No", completionTime: ""},
+   {task: "", importance: "", timeNeeded: "", delegate: "",
+   complete: "No", completionTime: ""},
+   {task: "", importance: "", timeNeeded: "", delegate: "",
+   complete: "No", completionTime: ""},
+   {task: "", importance: "", timeNeeded: "", delegate: "",
+   complete: "No", completionTime: ""},
+   {task: "", importance: "", timeNeeded: "", delegate: "",
+   complete: "No", completionTime: ""},
+   {task: "", importance: "", timeNeeded: "", delegate: "",
+   complete: "No", completionTime: ""},
+   {task: "", importance: "", timeNeeded: "", delegate: "",
+   complete: "No", completionTime: ""},
+   {task: "", importance: "", timeNeeded: "", delegate: "",
+   complete: "No", completionTime: ""},
+   {task: "", importance: "", timeNeeded: "", delegate: "",
+   complete: "No", completionTime: ""},
+   {task: "", importance: "", timeNeeded: "", delegate: "",
+   complete: "No", completionTime: ""},
 ];
 
 /**

@@ -1,11 +1,65 @@
 .full-width-table {
-  width: 80%;
-  height: 80%;
-  margin: 80px auto;
+  width: 100%;
+  margin-bottom: 1%;
   background-color: white;
+}
+
+.mat-toolbar {
+  height: 10%;
+}
+
+.mat-elevation-z8 {
+  background-color: whitesmoke;
 }
 
 .mat-raised-button {
   color: red;
   width: 20%;
+}
+
+td.mat-cell {
+  border-bottom-style: none;
+}
+
+.example-spacer {
+  // text-align: center;
+  flex: 1 1 auto;
+}
+
+.mat-header-row, .mat-row {
+  min-height: 75px;
+}
+
+.save {
+  background-color: green;
+  color: #fff;
+}
+
+.pagesButton {
+  background-color: white;
+  color: black;
+  margin-right: 5%;
+}
+
+.delete {
+  background-color: red;
+  color: #fff;
+  left: 5%;
+}
+
+.actionColumn {
+  right: 10%;
+}
+
+.taskButton {
+  background-color: white;
+  color: blueviolet;;
+}
+
+mat-paginator {
+  background-color: whitesmoke;
+}
+
+.example-icon {
+  margin-left: 0.5%;
 }

@@ -50,7 +50,6 @@ export class TaskTableComponent implements AfterViewInit {
     row['date'] = ithDate;
     row['delegate'] = row['delegate'] === 'yes';
     row['complete'] = row['complete'] === 'yes';
-
     console.log(typeof row);
     console.log(JSON.stringify(row) );
     console.log(row);
@@ -71,7 +70,6 @@ export class TaskTableComponent implements AfterViewInit {
 
     console.log("postad");
     return this.webServ.post('task',{row});
-
 
   }
 }

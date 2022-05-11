@@ -21,7 +21,9 @@ import { MatInputModule } from '@angular/material/input';
 import {HttpClientModule} from "@angular/common/http";
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,10 @@ import { RegisterComponent } from './register/register.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
