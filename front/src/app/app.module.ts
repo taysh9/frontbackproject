@@ -21,6 +21,10 @@ import { MatInputModule } from '@angular/material/input';
 import {HttpClientModule} from "@angular/common/http";
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -30,7 +34,6 @@ import { RegisterComponent } from './register/register.component';
     MatrixComponent,
     LoginComponent,
     RegisterComponent
-    // ViewsComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,11 @@ import { RegisterComponent } from './register/register.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatIconModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
