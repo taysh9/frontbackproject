@@ -20,17 +20,7 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true,
         minlength: 8
-    },
-    sessions: [{
-        token: {
-            type: String,
-            required: true
-        },
-        expiresAt: {
-            type: Number,
-            required: true
-        }
-    }]
+    }
 });
 
 
