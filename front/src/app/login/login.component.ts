@@ -18,14 +18,10 @@ export class LoginComponent implements OnInit {
   }
 
   onLoginButtonClicked(value: string, value2: string) {
-
-    this.login(value,value2).subscribe((res: HttpResponse<any>) =>{
-        if(res.status === 200)
-        {
-          this.router.navigate(['/']);
-        }
-
-        console.log(res);
+    console.log("here");
+    this.login(value,value2).subscribe((res:any) =>{
+      console.log(res.email);
+      this.router.navigate(['/task']);
       }
 
     );
@@ -36,15 +32,9 @@ export class LoginComponent implements OnInit {
 
   login(email:string,password:string)
   {
-    return this.webserv.login(email,password).pipe(
-      shareReplay(),
-      tap((res:HttpResponse<any>) => {
-        //this.setSess(res.body._id, res.headers.get('x-access-token'),res.headers.get('x-refresh-token') );
-        console.log("logged");
-
-
-      })
-    )
+    console.log("login post");
+    console.log(this.webserv.login(email,password));
+    return this.webserv.login(email,password);
 
   }
 

@@ -24,6 +24,16 @@ export class WebservService {
     return this.http.post(`${this.ROOT_URL}/users/login`, {
         email,
         password,
+      });
+
+
+  }
+
+  signup(email:string, password:string)
+  {
+    return this.http.post(`${this.ROOT_URL}/users`, {
+        email,
+        password,
       },
       {observe: 'response'
       });

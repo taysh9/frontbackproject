@@ -4,10 +4,13 @@ import { MatrixComponent } from './matrix/matrix/matrix.component';
 import {ViewsComponent} from "./pages/views/views.component";
 import { TaskTableComponent } from './task-table/task-table.component';
 import {LoginComponent} from "./login/login.component";
+import {RegisterComponent} from "./register/register.component";
 
 const routes: Routes = [
-  {path: '', component: TaskTableComponent},
+  {path: '', component: LoginComponent},
+  {path: 'task', component: TaskTableComponent},
   {path: 'matrix', component: MatrixComponent},
+  {path:'signup', component:RegisterComponent},
   {path: 'login', component: LoginComponent}
 ];
 
