@@ -1,5 +1,7 @@
 <div class="page">
-<p class="header">The Eisenhower Matrix</p>
+  <mat-toolbar color="primary">
+    <span class="matrix-tool-bar">The Eisenhower Matrix</span>
+  </mat-toolbar>
 <p class="urgent">Urgent</p>
 <p class="not_urgent">Not Urgent</p>
 <p class="important">Important</p>
@@ -20,5 +22,25 @@
 </mat-sidenav-container>
 
 <div>Please open on Stackblitz to see result</div> -->
+<mat-card class="importance-card">
+  <mat-card-title-group>
+    <mat-card-title>Importance</mat-card-title>
+    <mat-card-subtitle>Small</mat-card-subtitle>
+    <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+  </mat-card-title-group>
+  <mat-card-content>
+    {{"H"}}
+  </mat-card-content>
+</mat-card>
 
+<mat-card class="urgency-card">
+  <mat-card-title-group>
+    <mat-card-title>Urgency</mat-card-title>
+    <mat-card-subtitle>Medium</mat-card-subtitle>
+    <img mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+  </mat-card-title-group>
+  <mat-card-content>
+    {{"longText"}}
+  </mat-card-content>
+</mat-card>
 

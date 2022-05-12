@@ -1,57 +1,77 @@
 .header {
   position: relative;
   text-align: center;
-  top: 50px;
+  margin-top: 5%;
   font-size: large;
 }
 
-.page {
-  min-width: 1520px;
+.matrix-tool-bar {
+  text-align: center;
+  flex: 1 1 auto;
 }
+
+.importance-card {
+  margin-left: 70%;
+  margin-right: 2%;
+  margin-top: -34%;
+}
+
+.urgency-card {
+  margin-left: 70%;
+  margin-right: 2%;
+  margin-top: -25%;
+}
+
+// .page {
+//   min-width: 1520px;
+// }
 
 .mat-grid-tile {
   background: lightblue;
 }
 .mat-grid-list {
-  margin: auto;
-  width: 700px;
-  padding: 75px;
+  // margin: auto;
+  // margin-right: 38%;
+  left: 20%;
+  width: 40%;
+  // padding: 4%;
 }
 
 .urgent {
-  position: relative;
-  left: 525px;
-  top: 130px;
+  display: inline-block;
+  vertical-align: middle;
+  left: 27%;
+  top: -130%;
 }
 
 .not_urgent {
   position: relative;
-  left: 940px;
-  top: 100px;
+  left: 47%;
+  top: -100%;
 }
 
-.important {
-  position: relative;
-  left: 105px;
-  top: 245px;
+// .important {
+//   position: relative;
+//   left: 105px;
+//   top: 245px;
 
-}
+// }
 
-.importance_description {
-  position: relative;
-  left: 99px;
-  top: 290px;
-}
+// .importance_description {
+//   position: relative;
+//   left: 99px;
+//   top: 290px;
+// }
 
 
-.not_important {
-  position: relative;
-  left: 94px;
-  top: 425px;
-}
+// .not_important {
+//   position: relative;
+//   left: 94px;
+//   top: 425px;
+// }
 
-.not_importance_description {
-  position: relative;
-  left: 102px;
-  top: 413px;
-}
+// .not_importance_description {
+//   position: relative;
+//   left: 102px;
+//   top: 413px;
+// }
